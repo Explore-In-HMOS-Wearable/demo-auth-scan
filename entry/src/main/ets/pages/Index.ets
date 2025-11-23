@@ -1,5 +1,5 @@
 import { AccountViewModel } from '../viewmodel/AccountViewModel';
-import { router } from '@kit.ArkUI';
+
 import AccountViewModelSingleton from '../viewmodel/AccountViewModelSingleton';
 
 
@@ -52,7 +52,7 @@ struct Index {
     .onClick(async () => {
       const result = await this.viewModel.verifyAccount(this.getUIContext())
       if (result) {
-        router.pushUrl({
+        this.getUIContext().getRouter().pushUrl({
           url: 'pages/Scan'
         })
       } else {

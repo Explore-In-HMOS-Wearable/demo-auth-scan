@@ -5,7 +5,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { ScenarioFusionViewModel } from '../viewmodel/ScenarioFusionKitModel';
 import { AccountViewModel } from '../viewmodel/AccountViewModel';
 import AccountViewModelSingleton from '../viewmodel/AccountViewModelSingleton';
-import { router } from '@kit.ArkUI';
+
 
 @Entry
 @Component
@@ -54,9 +54,10 @@ struct Index {
           Image(this.pixelMap).width('80%').height(100).objectFit(ImageFit.Contain).margin({ top: 16 })
           Button('Cancel Authorization').onClick(() => {
             this.vm.cancelAuth(this.getUIContext())
-            router.pushUrl({
+            this.getUIContext().getRouter().pushUrl({
               url: 'pages/Index'
             })
+
           }).width('80%').height(30).margin({top:16})
         }
       }
