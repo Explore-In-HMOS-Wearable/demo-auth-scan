@@ -79,7 +79,7 @@ export class AccountKitHelper {
         const idToken = loginWithHuaweiIDCredential?.idToken;
         const openID = loginWithHuaweiIDCredential?.openID
         const unionID = loginWithHuaweiIDCredential?.unionID
-        if (code != undefined && idToken != undefined && unionID != undefined && openID != undefined) {
+        if (code !== undefined && idToken !== undefined && unionID !== undefined && openID !== undefined) {
           this._code = code
           this._idToken = idToken
           this._unionID = unionID
@@ -129,11 +129,13 @@ export class AccountKitHelper {
 
   dealAllError(error: BusinessError): void {
     hilog.error(0x0000, 'testTag', `Failed to login. Code: ${error.code}, message: ${error.message}`);
-    // In sign-in scenarios involving UI interactions, it is advised to guide the user with the following error code prompts:
+    // In sign-in scenarios involving UI interactions,
+    // it is advised to guide the user with the following error code prompts:
     if (error.code === ErrorCode.ERROR_CODE_LOGIN_OUT) {
       // HUAWEI ID not signed in. Use a HUAWEI ID to sign in and try again, or sign in to the app in another way.
     } else if (error.code === ErrorCode.ERROR_CODE_NETWORK_ERROR) {
-      // A network exception occurs. Check the current network status and try again, or sign in to the app in another way.
+      // A network exception occurs. Check the current network status
+      // and try again, or sign in to the app in another way.
     } else if (error.code === ErrorCode.ERROR_CODE_INTERNAL_ERROR) {
       // Failed to sign in. Try another way.
     } else if (error.code === ErrorCode.ERROR_CODE_USER_CANCEL) {
@@ -149,11 +151,13 @@ export class AccountKitHelper {
 
   dealAllErrorCancel(error: BusinessError<Object>): void {
     hilog.error(0x0000, 'testTag', `Failed to cancel. Code: ${error.code}, message: ${error.message}`);
-    // In sign-in scenarios that involve UI interactions, it is advised to display the following error messages to users:
+    // In sign-in scenarios that involve UI interactions,
+    // it is advised to display the following error messages to users:
     if (error.code === ErrorCode.ERROR_CODE_LOGIN_OUT) {
       // HUAWEI ID not signed in. Use a HUAWEI ID to sign in and try again, or sign in to the app in another way.
     } else if (error.code === ErrorCode.ERROR_CODE_NETWORK_ERROR) {
-      // A network exception occurs. Check the current network status and try again, or sign in to the app in another way.
+      // A network exception occurs. Check the current network status and
+      // try again, or sign in to the app in another way.
     } else if (error.code === ErrorCode.ERROR_CODE_INTERNAL_ERROR) {
       // Failed to sign in. Try another way.
     } else if (error.code === ErrorCode.ERROR_CODE_USER_CANCEL) {

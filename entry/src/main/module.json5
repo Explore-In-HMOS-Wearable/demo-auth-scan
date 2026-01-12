@@ -5,7 +5,6 @@
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
-      "phone",
       "wearable"
     ],
     "deliveryWithInstall": true,
@@ -17,6 +16,7 @@
         "value": "6917582161667882035"
       }
     ],
+    "routerMap": "$profile:router_map",
     "abilities": [
       {
         "name": "EntryAbility",

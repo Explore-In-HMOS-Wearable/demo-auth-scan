@@ -26,19 +26,19 @@ export class ScenarioFusionKitHelper {
       let deviceOrientation: string | undefined = data.deviceOrientation;
       let theme: ColorMode | undefined = data.theme;
       let result =
-        'Brand : ' + brand + '\n' +
-          'Device Model : ' + deviceModel + '\n' +
-          'Screen Width : ' + screenWidth + '\n' +
-          'Screen Height : ' + screenHeight + '\n' +
-          'Language : ' + language + '\n' +
-          'OsFullName : ' + osFullName + '\n' +
-          'Font Size Setting : ' + fontSizeSetting +'\n' +
-          'Sdk Api Version : ' + sdkApiVersion + '\n' +
-          'Bluetooth Enabled : ' + bluetoothEnabled + '\n' +
-          'Wifi Enabled : ' + wifiEnabled + '\n' +
-          'Location Enabled ' + locationEnabled + '\n' +
-          'Device Orientation' + deviceOrientation + '\n' +
-          'Theme : '+theme + '\n'
+        `Brand : ${brand} ` +
+          `deviceModel : ${deviceModel} /n` +
+          `Screen Width : ${screenWidth} \n` +
+          `Screen Height : ${screenHeight} \n` +
+          `Language : ${language} \n` +
+          `OsFullName : ${osFullName} \n` +
+          `Font Size Setting : ${fontSizeSetting} \n` +
+          `Sdk Api Version : ${sdkApiVersion} \n` +
+          `Bluetooth Enabled : ${bluetoothEnabled} \n` +
+          `Wifi Enabled : ${wifiEnabled} \n`  +
+          `Location Enabled : ${locationEnabled} \n` +
+          `Device Orientation: : ${deviceOrientation} \n` +
+          `Theme : ${theme} \n`
       return result
     } catch (error) {
       hilog.error(0x0000, 'testTag', 'failReason: %{public}d %{public}s', error.code, error.message);

@@ -79,7 +79,7 @@ useful and simple application that allows the user to retrieve account and devic
 
 - Huawei Watch 5
 
-# LICENSE
+# License
 
 DemoAuthScan is distributed under the terms of the MIT License.
-See the [LICENSE](/LICENSE) for more information.
+See the [LICENSE](./LICENSE) for more information.

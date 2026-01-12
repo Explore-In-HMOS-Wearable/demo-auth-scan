@@ -1,0 +1,22 @@
+{
+  "routerMap": [
+    {
+      "name": "Scan",
+      "pageSourceFile": "src/main/ets/pages/Scan.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    },
+    {
+      "name": "Index",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "PageTwoBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+
+
+  ]
+}

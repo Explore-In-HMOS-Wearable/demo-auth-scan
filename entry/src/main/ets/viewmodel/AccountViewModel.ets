@@ -50,8 +50,8 @@ export class AccountViewModel {
         this._message = account.error
         return false
       }
-      this._information = 'Huawei Open ID : ' + account.openID + '\n' +
-        'Huawei Union Id: ' + account.unionID
+      this._information = `Huawei Open ID : ${ account.openID} \n` +
+        `Huawei Union Id: ${account.unionID}`
     } catch (e) {
       this._error = true
 
